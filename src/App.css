@@ -2,6 +2,7 @@
   display: grid;
   min-height: 100vh;
   place-content: center;
+  grid-template-rows: 20dvh 65vh 10vh;
 }
 
 .dark {
@@ -14,15 +15,15 @@
   color: #111;
 }
 
-.toggle-theme {
+.toggle-theme,
+.login-btn,
+.lang-btn {
   justify-self: flex-end;
   align-self: flex-start;
   padding: 0.5rem 0.5rem;
   border: none;
   border-radius: 15px;
   cursor: pointer;
-  margin-top: 1rem;
-  margin-right: 1rem;
   background-color: transparent;
 }
 
@@ -34,8 +35,32 @@
   border: 1px solid red;
 }
 
-.header {
-  height: 10vh;
+.header-control {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+  place-self: flex-end;
+  align-self: flex-start;
+  padding: 1rem;
+  gap: 1rem;
+  scale: 0.5;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.main {
+  display: grid;
+  overflow-y: scroll;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.footer {
+  display: grid;
+  place-content: center;
 }
 
 .course-title {
@@ -44,34 +69,28 @@
   align-self: center;
 }
 
-.toggle-theme {
+.toggle-theme,
+.login-btn,
+.lang-btn {
   color: inherit;
   padding: 1rem;
-}
-
-.main {
-  height: 80vh;
-}
-
-.footer {
-  height: 10vh;
 }
 
 /* mobile */
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .app {
-    grid-template-rows: 15vh 80vh 5vh;
+    grid-template-rows: 15dvh 78vh 5vh;
   }
   .header,
   .main,
   .footer {
     width: 90vw;
   }
-  .toggle-theme {
-    scale: 0.5;
-    margin-top: 0.3rem;
-    margin-right: 0.3rem;
+  .header-control {
+    scale: 0.4;
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
   }
 }
 
@@ -79,15 +98,17 @@
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .app {
-    grid-template-rows: 20vh 70vh 10vh;
+    grid-template-rows: 20dvh 68vh 10vh;
   }
   .header,
   .main,
   .footer {
     width: 90vw;
   }
-  .toggle-theme {
-    scale: 0.7;
+  .header-control {
+    scale: 0.5;
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
   }
 }
 
@@ -95,15 +116,16 @@
 
 @media screen and (min-width: 1024px) {
   .app {
-    grid-template-rows: 20vh 70vh 5vh;
+    grid-template-rows: 20dvh 65vh 10vh;
   }
   .header,
   .main,
   .footer {
     width: 70vw;
   }
-  .toggle-theme {
-    margin-top: 1rem;
-    margin-right: 1rem;
+  .header-control {
+    scale: 0.5;
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
   }
 }
