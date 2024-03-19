@@ -1,101 +1,109 @@
 .app {
-    display: grid;
-    min-height: 100vh;
-    place-content: center;
+  display: grid;
+  min-height: 100vh;
+  place-content: center;
 }
 
 .dark {
-    background: linear-gradient(135deg, #230e30, #07042a);
-    color: #ddd;
+  background: linear-gradient(135deg, #444, #222);
+  color: #ddd;
 }
 
 .light {
-    background: linear-gradient(135deg, #ded6b4, #95e5f1);
-    color: #111;
+  background: linear-gradient(135deg, #e4e4e4, #838383);
+  color: #111;
 }
 
 .toggle-theme {
-    justify-self: flex-end;
-    align-self: flex-start;
-    padding: 0.5rem 0.5rem;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    margin-top: 1rem;
-    margin-right: 1rem;
-    background-color: transparent;
+  justify-self: flex-end;
+  align-self: flex-start;
+  padding: 0.5rem 0.5rem;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  background-color: transparent;
 }
 
 .header,
 .main,
 .footer {
-    display: grid;
-    width: 90vw;
-    border: 1px solid red;
+  display: grid;
+  width: 90vw;
+  border: 1px solid red;
 }
 
 .header {
-    height: 10vh;
+  height: 10vh;
+}
+
+.course-title {
+  display: grid;
+  justify-self: center;
+  align-self: center;
+}
+
+.toggle-theme {
+  color: inherit;
+  padding: 1rem;
 }
 
 .main {
-    height: 80vh;
+  height: 80vh;
 }
 
 .footer {
-    height: 10vh;
+  height: 10vh;
 }
-
 
 /* mobile */
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
-    .app {
-        grid-template-rows: 15vh 80vh 5vh;
-    }
-    .header,
-    .main,
-    .footer {
-        width: 90vw;
-    }
-    .toggle-theme {
-        scale: 0.5;
-        margin-top: 0.3rem;
-        margin-right: 0.3rem;
-    }
+  .app {
+    grid-template-rows: 15vh 80vh 5vh;
+  }
+  .header,
+  .main,
+  .footer {
+    width: 90vw;
+  }
+  .toggle-theme {
+    scale: 0.5;
+    margin-top: 0.3rem;
+    margin-right: 0.3rem;
+  }
 }
-
 
 /* tablet */
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-    .app {
-        grid-template-rows: 20vh 70vh 10vh;
-    }
-    .header,
-    .main,
-    .footer {
-        width: 90vw;
-    }
-    .toggle-theme {
-        scale: 0.7;
-    }
+  .app {
+    grid-template-rows: 20vh 70vh 10vh;
+  }
+  .header,
+  .main,
+  .footer {
+    width: 90vw;
+  }
+  .toggle-theme {
+    scale: 0.7;
+  }
 }
-
 
 /* desktop */
 
 @media screen and (min-width: 1024px) {
-    .app {
-        grid-template-rows: 20vh 70vh 10vh;
-    }
-    .header,
-    .main,
-    .footer {
-        width: 70vw;
-    }
-    .toggle-theme {
-        margin-top: 1rem;
-        margin-right: 1rem;
-    }
+  .app {
+    grid-template-rows: 20vh 70vh 5vh;
+  }
+  .header,
+  .main,
+  .footer {
+    width: 70vw;
+  }
+  .toggle-theme {
+    margin-top: 1rem;
+    margin-right: 1rem;
+  }
 }

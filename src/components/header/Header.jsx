@@ -13,16 +13,17 @@ export default function Header(params) {
         style={{
           boxShadow:
             theme === "dark"
-              ? "0 0 20px rgba(6, 207, 247, 0.835), inset 0 0 20px rgba(6, 207, 247, 0.835)"
-              : "0 0 20px rgba(239, 247, 6, 0.835), inset 0 0 20px rgba(247, 239, 6, 0.835)",
+              ? `0 0 20px rgba(6, 207, 247, 0.835), inset 0 0 20px rgba(6, 207, 247, 0.835)`
+              : `0 0 20px rgba(239, 247, 6, 0.835), inset 0 0 20px rgba(247, 239, 6, 0.835)`,
         }}
         className="toggle-theme"
         onClick={() => dispatch({ type: "TOGGLE_THEME" })}
       >
-        <h1>{theme === "dark" ? "🌛" : "🌝"}</h1>
+        <h1>{theme === "dark" ? "light" : "dark"}</h1>
       </button>
-
-      <h1>Header</h1>
+      <div className="course-title">
+        <h2>Artoscopia genunchiului</h2>
+      </div>
     </header>
   );
 }
