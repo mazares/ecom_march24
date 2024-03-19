@@ -11,14 +11,6 @@ const themeReducer = (state, action) => {
   }
 };
 
-/**
- * Provides the theme context for the application.
- *
- * @component
- * @param {Object} props - The component props.
- * @param {ReactNode} props.children - The child components.
- * @returns {JSX.Element} The rendered component.
- */
 export const ThemeProvider = ({ children }) => {
   const [theme, dispatch] = useReducer(themeReducer, "light");
 
