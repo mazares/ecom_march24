@@ -1,162 +1,173 @@
 .app {
-  display: grid;
-  min-height: 100vh;
-  place-content: center;
-  grid-template-rows: 20dvh 65vh 10vh;
+    display: grid;
+    min-height: 100vh;
+    place-content: center;
+    grid-template-rows: 20dvh 65vh 10vh;
 }
 
 .dark {
-  background: linear-gradient(135deg, #444, #222);
-  color: #ddd;
+    background: linear-gradient(135deg, #444, #222);
+    color: #ddd;
 }
 
 .light {
-  background: linear-gradient(135deg, #e4e4e4, #838383);
-  color: #111;
+    background: linear-gradient(135deg, #e4e4e4, #838383);
+    color: #111;
 }
 
 .toggle-theme,
 .login-btn,
 .lang-btn {
-  justify-self: flex-end;
-  align-self: flex-start;
-  padding: 0.5rem 0.5rem;
-  border: none;
-  border-radius: 15px;
-  cursor: pointer;
-  background-color: transparent;
+    justify-self: flex-end;
+    align-self: flex-start;
+    padding: 0.5rem 0.5rem;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: transparent;
 }
 
 .header,
 .main,
 .footer {
-  display: grid;
-  width: 90vw;
-  border: 1px solid red;
+    display: grid;
+    width: 90vw;
+    border: 1px solid red;
 }
 
 .header-control {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: fit-content;
-  height: fit-content;
-  place-self: flex-end;
-  align-self: flex-start;
-  padding: 1rem;
-  gap: 1rem;
-  scale: 0.5;
-  margin-top: 0.5rem;
-  margin-right: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    place-self: flex-end;
+    align-self: flex-start;
+    padding: 1rem;
+    gap: 1rem;
+    scale: 0.5;
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
 }
 
 .main {
-  display: grid;
-  padding: 1rem;
-  gap: 1rem;
+    display: grid;
+    padding: 1rem;
+    gap: 1rem;
 }
 
 .courses {
-  display: grid;
-  overflow-y: scroll;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1rem;
-  padding: 1rem;
+    display: grid;
+    overflow-y: scroll;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
 }
 
 .footer {
-  display: grid;
-  place-content: center;
+    display: grid;
+    place-content: center;
 }
 
 .course-title {
-  display: grid;
-  justify-self: center;
-  align-self: center;
+    display: grid;
+    justify-self: center;
+    align-self: center;
 }
 
 .card-course {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  gap: 1rem;
-  padding: 1rem;
-  border-radius: 15px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-align: center;
-  background: linear-gradient(135deg, #8888884e, #4d4d4d4c);
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    background: linear-gradient(135deg, #8888884e, #4d4d4d4c);
 }
 
 .toggle-theme,
 .login-btn,
 .lang-btn {
-  color: inherit;
-  padding: 1rem;
+    color: inherit;
+    padding: 1rem;
 }
+
 
 /* mobile */
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
-  .app {
-    grid-template-rows: 15dvh 78vh 5vh;
-  }
-  .header,
-  .main,
-  .footer {
-    width: 90vw;
-  }
-  .card-course {
-    padding: 0.5rem;
-    scale: 0.8;
-  }
-  .header-control {
-    scale: 0.4;
-    margin-top: 0.5rem;
-    margin-right: 0.5rem;
-  }
+    .app {
+        grid-template-rows: 15dvh 78vh 5vh;
+    }
+    .header,
+    .main,
+    .footer {
+        width: 90vw;
+    }
+    .card-course {
+        padding: 0.5rem;
+        scale: 0.8;
+    }
+    .header-control {
+        scale: 0.4;
+        margin-top: 0.5rem;
+        margin-right: 0.5rem;
+    }
 }
+
 
 /* tablet */
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  .app {
-    grid-template-rows: 20dvh 68vh 10vh;
-  }
-  .header,
-  .main,
-  .footer {
-    width: 90vw;
-  }
-  .card-course {
-    padding: 0.5rem;
-    scale: 0.7;
-  }
-  .header-control {
-    scale: 0.5;
-    margin-top: 0.5rem;
-    margin-right: 0.5rem;
-  }
+    .app {
+        grid-template-rows: 20dvh 68vh 10vh;
+    }
+    .header,
+    .main,
+    .footer {
+        width: 90vw;
+    }
+    .card-course {
+        padding: 0.5rem;
+        scale: 0.7;
+    }
+    .header-control {
+        scale: 0.5;
+        margin-top: 0.5rem;
+        margin-right: 0.5rem;
+    }
 }
+
 
 /* desktop */
 
 @media screen and (min-width: 1024px) {
-  .app {
-    grid-template-rows: 20dvh 65vh 10vh;
-  }
-  .header,
-  .main,
-  .footer {
-    width: 70vw;
-  }
-  .card-course {
-    padding: 1rem;
-    scale: 1;
-  }
-  .header-control {
-    scale: 0.5;
-    margin-top: 0.5rem;
-    margin-right: 0.5rem;
-  }
+    .app {
+        grid-template-rows: 20dvh 65vh 10vh;
+    }
+    .header,
+    .main,
+    .footer {
+        width: 70vw;
+    }
+    .card-course {
+        padding: 1rem;
+        scale: 0.8;
+    }
+    .header-control {
+        scale: 1;
+        margin-top: 1rem;
+        margin-right: 1rem;
+    }
+    .courses {
+        padding: 1rem;
+    }
+    .header-control {
+        scale: 0.5;
+        margin-top: 0.5rem;
+        margin-right: 0.5rem;
+    }
 }

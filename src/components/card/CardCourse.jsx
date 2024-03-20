@@ -4,6 +4,7 @@ export default function CardCourse({
   id,
   title,
   description,
+  teachers,
   places,
   availablePlaces,
   format,
@@ -24,6 +25,7 @@ export default function CardCourse({
     >
       <div className="card-header">
         <h2>{title}</h2>
+        <p>{teachers}</p>
         <p
           style={{
             color: `0px 0px 30px hsl(${
